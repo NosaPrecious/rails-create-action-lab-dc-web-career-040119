@@ -18,7 +18,7 @@ class StudentsController < ApplicationController
     @student.last_name = params[:last_name]
     Student.create(first_name: @student.first_name, last_name: @student.last_name)
     byebug
-    redirect_to student_path(@student)
+    redirect_to student_path(@student.id)
   end
 
 end
